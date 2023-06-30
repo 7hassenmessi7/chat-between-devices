@@ -1,0 +1,35 @@
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <title>main</title>
+        <meta charset="UTF_8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static ' C:\Users\messaoudi\OneDrive\Bureau\djangoproject\static\css\main.css' %}">
+       
+    </head>
+    <body>
+      <hr>
+
+
+            <h2>Upload</h2>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" name="document">
+                <button type="submit">Upload file</button>
+            </form>
+            {% if url %}
+                <p>Uploaded file: <a href="{{ url }}">{{ url }}</a></p>
+            {% endif %}
+         
+
+
+
+
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static ' C:\Users\messaoudi\OneDrive\Bureau\djangoproject\static\css\main.css' %}">
+            
+       
+    </body>
+</html>
